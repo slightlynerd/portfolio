@@ -1,286 +1,168 @@
-<!doctype html>
-<html amp lang="en">
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script>
-    <title>Yours truly, Kelvin Gobo</title>
-    <link rel="canonical" href="https://kelvingobo.tk/index.html">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "NewsArticle",
-        "headline": "Open-source framework for publishing content",
-        "datePublished": "2015-10-07T12:02:41Z",
-        "image": [
-          "logo.jpg"
-        ]
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kelvin Gobo</title>
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Katibeh" as="style">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Katibeh" rel="stylesheet">
+    <style media="screen">
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
       }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <style amp-custom>
-      body {
+      p, span, a {
         font-family: 'Roboto', sans-serif;
-        --main-bg-color: #2196F3;
+        line-height: 24px;
+        font-size: 16px;
+        /* font-weight: 300; */
       }
-      .hero {
-        position: relative;
-        background: url('images/sea.jpeg');
-        background-color: #eee;
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 100vh;
-        font-family: 'Black Ops one', cursive;
-        text-transform: uppercase;
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Katibeh';
+        font-weight: 200;
+        margin: 0;
       }
-      .hero-nav {
-        padding: 10px;
-        position: absolute;
-        top: 0;
-        right: 0;
+      h1, h2 {
+        font-size: 44px;
       }
-      .hero-text {
-        padding: 10px;
-        position: absolute;
-        left: 0;
-        top: 30%;
-        width: 50%;
+      h3, h4 {
+        font-size: 30px;
       }
-      .hero-text .header {
-        padding: 10px;
-        position: absolute;
-        left: 20px;
-        top: 30%;
+      h5, h6 {
+        font-size: 24px;
       }
-      .hero-text .line {
-        position: absolute;
-        left: 0;
-        top: 40%;
-        float: left;
-        border: 2px solid red;
-        width: 20px;
-        vertical-align: middle;
+      a, a:link, a:visited, a:hover {
+        color: black;
+        font-weight: bold;
+        font-size: 10px;
+        text-decoration: none;
       }
-      .hero-footer {
-        padding-top: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
-        position: absolute;
-        right: 0;
-        bottom: 0;
+      #active {
+        border-right: 3px solid #69F0AE;
       }
-      .hero-footer .xp {
-        background-color: var(--main-bg-color);
-        color: white;
-        padding: 15px;
+      header, footer {
+        margin: 5px;
       }
-      h1, p{
-        margin-top: 0;
-        margin-bottom: 0;
+      .cover {
+        position: fixed;
+        height: 100%;
+        width: 100%;
       }
-      h2 {
-        display: inline-block;
-        line-height: 1;
-        border-bottom: 2px solid var(--main-bg-color);
+      .bio {
+        display: flex;
+        padding: 5px;
+        height: 80%;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #E8F5E9;
       }
-      h3::before {
-        content: "I ";
+      .bio .bio-cen {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
       }
       button {
-        background-color: var(--main-bg-color);
-        color: white;
-        outline: none;
-        border: none;
+        margin: 15px 0;
         padding: 15px;
-        font-family: 'Black Ops one', cursive;
+        border-radius: 32px;
+        background-color: #69F0AE;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        font-weight: bold;
+        border: none;
+        outline: none;
       }
-      .keywords {
-        color: var(--main-bg-color);
+      .mugshot img{
+        width: 200px;
+        height: 250px;
+        margin: 10px;
       }
-      .about {
-        padding: 10px;
-        text-align: center;
+      .author-note {
+        padding: 5px;
+        width: 50%;
       }
-      .about-content {
-        width: 60%;
-        text-align: justify;
+      .author-note p {
+        font-size: 16px;
       }
-      .about-header {
+      nav a {
+        display: block;
+        padding: 5px;
+        margin: 10px 0;
+      }
+      .footnotes {
+        width: 90%;
         display: flex;
         align-items: center;
-        text-align: left;
+        justify-content: space-between;
       }
-      .about-header amp-img {
-        margin-left: 10px;
-      }
-      .about-content p {
-        color: #424242;
-      }
-      .works {
-        display: block;
-        text-align: center;
-        padding: 10px;
-      }
-      .works h2 {
-        display: block;
-      }
-      .card {
-        background: url('images/sea.jpeg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        box-shadow: 0px 3px 20px 0 rgba(0,0,0,0.075);
-        box-sizing: border-box;
-        display: inline-block;
-        width: 200px;
-        height: 144px;
-        margin: 10px 5px;
-        position: relative;
-        transition: transform 0.3s, box-shadow 0.3s;
-      }
-      .card::before {
-        background: linear-gradient(to right, #2196F3, #64B5F6, #82B1FF);
-        content: '';
-        left: 0;
-        height: 2px;
+      footer {
         position: absolute;
-        right: 0;
-        top: -2px;
+        bottom: 0;
       }
-      .card-type {
-        opacity: 0;
-        width: auto;
-        height: 100%;
-        color: black;
-        margin-bottom: 15px;
-        transition: opacity 0.3s, background 0.3s;
+      footer p {
+        font-size: 14px;
       }
-      .card-type h4 {
-        margin-top: 0;
-        margin-bottom: 0;
-      }
-      .card-type:hover {
-        opacity: 1;
-        background: #fff;
-      }
-      .card:hover {
-        box-shadow: 0px 3px 50px 0 rgba(0,0,0,0.075);
-        transform: translateY(-5px);
-        cursor: pointer;
-      }
-      .contact {
-        text-align: center;
-        padding: 10px;
-      }
-      .contact input {
-        display: block;
-      }
-      hr {
-        border-top: 1px solid #8c8b8b;
-	      border-bottom: 1px solid #fff;
-      }
-      @media (max-width: 768px) {
-        .about-content {
-          width: 80%;
-        }
-      }
-      @media (max-width: 320px) {
-        .about-content {
-          width: 100%;
-        }
+      #about {
+        display: none;
       }
     </style>
   </head>
   <body>
-    <div class="hero">
-      <p class="hero-nav"><span>Menu</span></p>
-      <div class="hero-text">
-        <div class="line">
-          <hr>
+    <div class="cover">
+      <header>
+        <h5><strong><em>KG</em></strong></h5>
+      </header>
+      <div class="bio">
+        <div class="bio-cen">
+          <div class="mugshot">
+            <img src="images/moi-2.JPG" alt="picture of kelvin gobo">
+          </div>
+          <div class="author-note">
+            <p>Hey, I'm <strong>Kelvin Gobo</strong> and I am a Front End Developer with a passion for building beautiful experiences.</p>
+            <button>Portfolio</button>
+          </div>
+          <nav>
+            <a id="active" href="#">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#blog">BLOG</a>
+            <a href="#contact">CONTACT</a>
+            <a href="#portfolio">PORTFOLIO</a>
+          </nav>
         </div>
-        <div class="header">
-          <h1>Hi, <span class="keywords">Kelvin</span> here</h1>
-          <h1>I am a <span class="keywords">Front End</span></h1>
-          <h1><span class="keywords"></span> Developer</h1>
-          <h1>and <span class="keywords">User Interface</span></h1>
-          <h1>Designer</h1>
-          <button type="button" name="button">See my works</button>
-        </div>
+        
       </div>
-      <div class="hero-footer">
-        <div class="xp">
-          <p>2 years xp</p>
-        </div>
+      <div class="about" id="about">
+        <p>Key</p>
       </div>
+      
     </div>
-    <div class="about">
-      <h2>A little about what I do</h2>
-      <div class="about-content">
-        <div class="about-header">
-          <h3>blog</h3>
-          <amp-img
-            alt="book icon"
-            src="images/book-icon.png"
-            width="24"
-            height="24">
-          </amp-img>
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div>
+        <footer class="footnotes">
+          <p>&copy 2018 Kelvin Gobo. All Rights Reserved.</p>
+          <div>
+            <a href="https://www.facebook.com/kelvin.gobo"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/kelvingobo"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/kelvingobo"><i class="fab fa-github"></i></a>
+          </div>
+        </footer>
       </div>
-      <div class="about-content">
-        <div class="about-header">
-          <h3>write</h3>
-          <amp-img
-            alt="pencil icon"
-            src="images/pencil-icon.ico"
-            width="24"
-            height="24">
-          </amp-img>
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-      <div class="about-content">
-        <div class="about-header">
-          <h3>speak</h3>
-          <amp-img
-            alt="mic icon"
-            src="images/mic.png"
-            width="24"
-            height="24">
-          </amp-img>
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-    </div>
-    <hr>
-    <div class="works">
-      <h2>Portfolio</h2>
-      <div class="card">
-        <div class="card-type">
-          <h4>Codehacks</h4>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-type">
-          <h4>Dewbicon</h4>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-type">
-          <h4>Mundle</h4>
-        </div>
-      </div>
-    </div>
-    <div class="contact">
-      <h2>Fancy working with me?</h2>
-      <p>Shoot me a message</p>
-      <input type="text" placeholder="Name">
-      <input type="text" placeholder="Purpose">
-      <input type="text" placeholder="Message">
-      <button type="button" name="button">Send</button>
-    </div>
+    <script type="text/javascript">
+      var navLinks = document.querySelectorAll('a');
+      var navLinksArr = [];
+      for(var i = 0, n; n = navLinks[i]; ++i) navLinksArr.push(n);
+      navLinksArr.map(function(index) {
+        index.addEventListener('click', function(e) {
+          var url = e.target.href;
+          var hashIndex = url.indexOf('#');
+          var newUrl = url.substring(hashIndex);
+          console.log(newUrl);
+        });
+      })
+    </script>
   </body>
 </html>

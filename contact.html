@@ -84,7 +84,7 @@
       }
       .author-note {
         padding: 5px;
-        width: 50%;
+        width: 60%;
       }
       .author-note p {
         font-size: 16px;
@@ -108,11 +108,12 @@
         font-size: 14px;
       }
       i {
-        font-size: 16px;
-        margin: 0 10px;
+        font-size: 32px;
+        margin: 0 20px;
       }
-      #about {
-        display: none;
+      hr {
+          border: 1px solid grey;
+          border-bottom: none;
       }
       @media (max-width: 450px) {
         html, body {
@@ -131,31 +132,25 @@
   <body>
     <div class="cover">
       <header>
-        <h5><strong><em>KG</em></strong></h5>
+        <h5><strong><em>CONTACT</em></strong></h5>
       </header>
       <div class="bio">
         <div class="bio-cen">
-          <div class="mugshot">
-            <img src="images/moi-2.JPG" alt="picture of kelvin gobo">
-          </div>
           <div class="author-note">
-            <p>Hey, I'm <strong>Kelvin Gobo</strong> and I am a Front End Developer with a passion for building beautiful experiences.</p>
-            <button>Portfolio</button>
+            <a href="https://www.facebook.com/kelvin.gobo"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/kelvingobo"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/kelvingobo"><i class="fab fa-github"></i></a>
           </div>
           <nav>
-            <a id="active">HOME</a>
-            <a href="about.html">ABOUT</a>
+            <a href="../index.html">HOME</a>
+            <a href="../about.html">ABOUT</a>
             <a href="blog/index.html">BLOG</a>
-            <a href="contact.html">CONTACT</a>
+            <a id="active">CONTACT</a>
             <a href="#portfolio">PORTFOLIO</a>
           </nav>
         </div>
         
       </div>
-      <div class="about" id="about">
-        <p>Key</p>
-      </div>
-      
     </div>
     <div>
         <footer class="footnotes">
@@ -167,6 +162,5 @@
           </div>
         </footer>
       </div>
-    
   </body>
 </html>

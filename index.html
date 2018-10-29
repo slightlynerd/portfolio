@@ -8,7 +8,7 @@
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Katibeh" as="style">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Katibeh" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <style media="screen">
       html, body {
         margin: 0;
@@ -23,7 +23,7 @@
         /* font-weight: 300; */
       }
       h1, h2, h3, h4, h5, h6 {
-        font-family: 'Katibeh';
+        font-family: 'Playfair Display', serif;
         font-weight: 200;
         margin: 0;
       }
@@ -48,8 +48,12 @@
       header, footer {
         margin: 5px;
       }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
       .cover {
-        position: fixed;
         height: 100%;
         width: 100%;
       }
@@ -69,10 +73,13 @@
       }
       button {
         margin: 15px 0;
-        padding: 15px;
+        padding: 16px;
+        width: 30%;
         border-radius: 32px;
         background-color: #69F0AE;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        font-size: 14px;
+        text-transform: uppercase;
         font-weight: bold;
         border: none;
         outline: none;
@@ -86,13 +93,17 @@
         padding: 5px;
         width: 50%;
       }
-      .author-note p {
-        font-size: 16px;
+      .author-note .position {
+        font-size: 14px;
+        font-style: italic;
       }
       nav a {
         display: block;
         padding: 5px;
         margin: 10px 0;
+      }
+      .portfolio {
+        text-align: center;
       }
       .footnotes {
         width: 90%;
@@ -100,19 +111,12 @@
         align-items: center;
         justify-content: space-between;
       }
-      footer {
-        position: absolute;
-        bottom: 0;
-      }
       footer p {
         font-size: 14px;
       }
       i {
         font-size: 16px;
         margin: 0 10px;
-      }
-      #about {
-        display: none;
       }
       @media (max-width: 450px) {
         html, body {
@@ -131,7 +135,8 @@
   <body>
     <div class="cover">
       <header>
-        <h5><strong><em>KG</em></strong></h5>
+        <h5><strong>KG</strong></h5>
+        <p><i class="fas fa-bars"></i></p>
       </header>
       <div class="bio">
         <div class="bio-cen">
@@ -139,23 +144,18 @@
             <img src="images/moi-2.JPG" alt="picture of kelvin gobo">
           </div>
           <div class="author-note">
-            <p>Hey, I'm <strong>Kelvin Gobo</strong> and I am a Front End Developer with a passion for building beautiful experiences.</p>
+            <h2>Kelvin Gobo</h2>
+            <p class="position">Front End Developer</p>
+            <p>I'm a Front End Developer with a passion for building beautiful and applications on the WWW.</p>
             <button>Portfolio</button>
           </div>
-          <nav>
-            <a id="active">HOME</a>
-            <a href="about.html">ABOUT</a>
-            <a href="blog/index.html">BLOG</a>
-            <a href="contact.html">CONTACT</a>
-            <a href="#portfolio">PORTFOLIO</a>
-          </nav>
         </div>
         
       </div>
-      <div class="about" id="about">
-        <p>Key</p>
-      </div>
       
+    </div>
+    <div class="portfolio">
+      <h3>Portfolio</h3>
     </div>
     <div>
         <footer class="footnotes">

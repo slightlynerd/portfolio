@@ -27,7 +27,7 @@
         font-weight: 200;
         margin: 0;
       }
-      h1, h2 {
+      /* h1, h2 {
         font-size: 44px;
       }
       h3, h4 {
@@ -35,7 +35,7 @@
       }
       h5, h6 {
         font-size: 24px;
-      }
+      } */
       a, a:link, a:visited, a:hover {
         color: black;
         font-weight: bold;
@@ -73,9 +73,9 @@
       }
       button {
         margin: 15px 0;
-        padding: 16px;
+        padding: 10px;
         width: 30%;
-        border-radius: 32px;
+        border-radius: 4px;
         background-color: #69F0AE;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         font-size: 14px;
@@ -102,8 +102,39 @@
         padding: 5px;
         margin: 10px 0;
       }
-      .portfolio {
+      .section {
+        width: 80%;
+        margin: 100px auto;
         text-align: center;
+      }
+      .section div img {
+        width: 320px;
+        height: 220px;
+        border: 1px solid black;
+        margin: 0;
+      }
+      .right {
+        text-align: right;
+      }
+      .left {
+        text-align: left;
+      }
+      form {
+      }
+      form input, form textarea {
+        display: block;
+        width: 100%;
+        padding: 8px;
+        margin: 5px;
+        border: 1px solid #999;
+        border-radius: 4px;
+        -webkit-appearance: none;
+      }
+      form button {
+        display: block;
+        width: 50%;
+        border-radius: 4px;
+        padding: 10px;
       }
       .footnotes {
         width: 90%;
@@ -117,6 +148,15 @@
       i {
         font-size: 16px;
         margin: 0 10px;
+      }
+      .icons {
+        margin: 10px;
+        font-size: 48px;
+      }
+      p img {
+        margin: 10px;
+        width: 60px;
+        height: 60px;
       }
       @media (max-width: 450px) {
         html, body {
@@ -135,7 +175,7 @@
   <body>
     <div class="cover">
       <header>
-        <h5><strong>KG</strong></h5>
+        <h2><strong>KG</strong></h2>
         <p><i class="fas fa-bars"></i></p>
       </header>
       <div class="bio">
@@ -144,7 +184,7 @@
             <img src="images/moi-2.JPG" alt="picture of kelvin gobo">
           </div>
           <div class="author-note">
-            <h2>Kelvin Gobo</h2>
+            <h1>Kelvin Gobo</h1>
             <p class="position">Front End Developer</p>
             <p>I'm a Front End Developer with a passion for building beautiful and applications on the WWW.</p>
             <button>Portfolio</button>
@@ -154,9 +194,67 @@
       </div>
       
     </div>
-    <div class="portfolio">
-      <h3>Portfolio</h3>
+    <div class="section">
+      <h2>Toolbox</h2>
+      <p>My software development stack</p>
+      <p>
+          <i class="icons fab fa-html5"></i>
+          <i class="icons fab fa-css3"></i>
+          <i class="icons fab fa-js"></i>
+          <i class="icons fab fa-vuejs"></i>
+          <img src="images/firebase.png" alt="firebase icon">
+      </p>
     </div>
+
+    <div class="section">
+      <h2>Portfolio</h2>
+      <p>my latest work</p>
+      <div>
+        <img src="images/mundle.png" alt="mundle website">
+        <img src="images/dewbicon.png" alt="dewbicon website">
+        <img src="images/codehacks.png" alt="codehacks website">
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Experience</h2>
+      <div>
+        <p class="left">2016-2017</p>
+        <h4 class="left">DEWBICON</h4>
+        <p class="left">Front End Developer</p>
+        <p class="left">description of role assigned in movie</p>
+      </div>
+      <div>
+        <p class="right">2017-2018</p>
+        <h4 class="right">Andela Learning Community</h4>
+        <p class="right">Learning community ambassador</p>
+        <p class="right">description of role assigned in movie</p>
+      </div>
+      <div>
+        <p class="left">2018</p>
+        <h4 class="left">Hotels.ng</h4>
+        <p class="left">HNG Intern</p>
+        <p class="left">description of role assigned in movie</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div style="display: flex; justify-content: space-around;">
+        <div style="width: 50%;">
+          <h2>Reach me</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus delectus sit asperiores vitae voluptas suscipit magnam saepe pariatur, minima non beatae sed et vero nam, necessitatibus, fuga eligendi provident fugiat!</p>
+        </div>
+        
+        <form action="">
+          <input type="text" placeholder="name">
+          <input type="text" placeholder="email">
+          <textarea name="message" cols="30" rows="10" placeholder="message"></textarea>
+          <button>Send</button>
+        </form>
+      </div>
+      <div></div>
+    </div>
+
     <div>
         <footer class="footnotes">
           <p>&copy 2018 Kelvin Gobo. All Rights Reserved.</p>

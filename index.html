@@ -114,20 +114,37 @@
       }
       .toolbox {
         width: 80%;
-        margin: 30px auto;
-        text-align: center;
-      }
-      .contact {
-        margin: 30px auto;
-        padding: 10px 0;
-        text-align: center;
-        background-color: #222222;
-      }
-      .contact-content {
-        width: 80%;
         display: flex;
-        justify-content: space-around;
+        flex-direction: column;
+        text-align: center;
+        margin: 10px auto;
       }
+      p.levels {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        width: 100%;
+      }
+      p progress {
+        width: 70%;
+        background: #69F0AE;
+        -webkit-appearance: none;
+      }
+      progress::-webkit-progress-value {
+  background: #69F0AE;
+}
+
+progress::-moz-progress-bar {
+  background: #69F0AE;
+}
+
+progress::-webkit-progress-value {
+  background: #69F0AE;
+}
+
+progress::-webkit-progress-bar {
+  
+}
       .section {
         width: 70%;
         margin: 30px auto;
@@ -153,6 +170,21 @@
       .left {
         text-align: left;
         padding: 10px;
+      }
+      .contact {
+        margin: 30px auto;
+        padding: 10px 0;
+        text-align: justify;
+        background-color: #222222;
+        color: white;
+      }
+      .contact-content {
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+      }
+      .contact-content div{
+        width: 50%;
       }
       form {
       }
@@ -238,11 +270,22 @@
         .section {
           width: 85%;
         }
+        .contact-content div {
+          width: 40%;
+        }
       }
       @media (max-width: 620px) {
         .mugshot img {
           width: 250px;
           height: 250px;
+        }
+        .contact-content div, .contact-content form {
+          width: 90%;
+        }
+        .contact-content {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
         }
       }
       @media (max-width: 580px) {
@@ -250,6 +293,9 @@
           flex-direction: column;
           align-items: center;
           justify-content: center;
+        }
+        .author-note {
+          width: 80%;
         }
         .mugshot img {
           width: 300px;
@@ -265,6 +311,9 @@
         .cover {
           position: relative;
           height: auto;
+        }
+        .author-note {
+          width: 95%;
         }
         .section {
           width: 100%;
@@ -335,20 +384,37 @@
     </div>
 
     <div class="toolbox">
-      <h2>Toolbox</h2>
-      <p>My software development stack</p>
-      <p>
-          <i class="icons fab fa-html5"></i>
-          <i class="icons fab fa-css3"></i>
-          <i class="icons fab fa-js"></i>
-          <i class="icons fab fa-vuejs"></i>
-          <img src="images/firebase.png" alt="firebase icon">
+      <h2>professional</h2>
+      <p>my knowledge level in software</p>
+      <p class="levels">
+        <span>HTML5</span>
+        <progress value="85" max="100"></progress>
+      </p>
+      <p class="levels">
+        <span>CSS3</span>
+        <progress value="85" max="100"></progress>
+      </p>
+      <p class="levels">
+          <span>Javascript</span>
+          <progress value="80" max="100"></progress>
+      </p>
+      <p class="levels">
+          <span>Vue.js</span>
+          <progress value="75" max="100"></progress>
+      </p>
+      <p class="levels">
+          <span>Polymer.js</span>
+          <progress value="75" max="100"></progress>
+      </p>
+      <p class="levels">
+          <span>Firebase</span>
+          <progress value="80" max="100"></progress>
       </p>
     </div>
 
     <div class="contact">
       <div class="contact-content">
-        <div style="width: 50%;">
+        <div>
           <h2>Reach me</h2>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus delectus sit asperiores vitae voluptas suscipit magnam saepe pariatur, minima non beatae sed et vero nam, necessitatibus, fuga eligendi provident fugiat!</p>
         </div>

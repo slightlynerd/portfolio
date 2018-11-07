@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kelvin Gobo</title>
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Katibeh" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Playfair+Display" as="style">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
@@ -20,12 +20,10 @@
         font-family: 'Roboto', sans-serif;
         line-height: 24px;
         font-size: 16px;
-        /* font-weight: 300; */
       }
       h1, h2, h3, h4, h5, h6 {
         font-family: 'Playfair Display', serif;
         font-weight: 200;
-        margin: 0;
       }
       /* h1, h2 {
         font-size: 44px;
@@ -54,27 +52,25 @@
         justify-content: space-between;
       }
       .cover {
-        height: 100%;
         width: 100%;
       }
       .bio {
         display: flex;
         padding: 5px;
-        height: 80%;
+        height: auto;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         background-color: #E8F5E9;
       }
-      .bio .bio-cen {
+      .bio-cen {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        width: 100%;
+        width: 70%;
       }
       button {
         margin: 15px 0;
         padding: 10px;
-        width: 30%;
         border-radius: 4px;
         background-color: #69F0AE;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -85,8 +81,8 @@
         outline: none;
       }
       .mugshot img{
-        width: 200px;
-        height: 250px;
+        width: 350px;
+        height: 350px;
         margin: 10px;
       }
       .author-note {
@@ -97,21 +93,45 @@
         font-size: 14px;
         font-style: italic;
       }
+      .author-note p {
+        text-align: justify;
+      }
       nav a {
         display: block;
         padding: 5px;
         margin: 10px 0;
       }
-      .section {
-        width: 80%;
-        margin: 100px auto;
+      .portfolio {
+        width: 90%;
+        margin: 30px auto;
         text-align: center;
       }
-      .section div img {
-        width: 320px;
-        height: 220px;
+      .portfolio div img {
+        width: 300px;
+        height: 200px;
         border: 1px solid black;
-        margin: 0;
+        margin: 5px;
+      }
+      .toolbox {
+        width: 80%;
+        margin: 30px auto;
+        text-align: center;
+      }
+      .contact {
+        margin: 30px auto;
+        padding: 10px 0;
+        text-align: center;
+        background-color: #222222;
+      }
+      .contact-content {
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+      }
+      .section {
+        width: 70%;
+        margin: 30px auto;
+        text-align: center;
       }
       .exp {
         margin: 100px auto;
@@ -124,12 +144,15 @@
       }
       .right {
         text-align: right;
+        padding: 10px;
       }
       .center {
         text-align: center;
+        padding: 10px;
       }
       .left {
         text-align: left;
+        padding: 10px;
       }
       form {
       }
@@ -170,13 +193,81 @@
         width: 60px;
         height: 60px;
       }
+      @media (max-width: 1070px) {
+        .portfolio {
+          width: 95%;
+        }
+      }
+      @media (max-width: 1012px) {
+        .portfolio {
+          width: 95%;
+        }
+        .portfolio div img {
+          width: 250px;
+          height: 150px;
+        }
+      }
+      @media (max-width: 880px) {
+        .bio-cen {
+          width: 75%;
+        }
+        .portfolio div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .portfolio div img {
+          display: block;
+          width: 300px;
+          height: 200px;
+        }
+      }
+      @media (max-width: 800px) {
+        .bio-cen {
+          width: 85%;
+        }
+        .mugshot img{
+          width: 300px;
+          height: 300px;
+        }
+      }
+      @media (max-width: 700px) {
+        .bio-cen {
+          width: 95%;
+        }
+        .section {
+          width: 85%;
+        }
+      }
+      @media (max-width: 620px) {
+        .mugshot img {
+          width: 250px;
+          height: 250px;
+        }
+      }
+      @media (max-width: 580px) {
+        .bio-cen {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        .mugshot img {
+          width: 300px;
+        }
+      }
       @media (max-width: 450px) {
         html, body {
           height: auto;
         }
+        .bio-cen {
+          width: 90%;
+        }
         .cover {
           position: relative;
           height: auto;
+        }
+        .section {
+          width: 100%;
         }
         footer {
           position: relative;
@@ -187,18 +278,18 @@
   <body>
     <div class="cover">
       <header>
-        <h2><strong>KG</strong></h2>
+        <h2><strong>kg</strong></h2>
         <p><i class="fas fa-bars"></i></p>
       </header>
       <div class="bio">
         <div class="bio-cen">
           <div class="mugshot">
-            <img src="images/moi-2.JPG" alt="picture of kelvin gobo">
+            <img src="images/kelvin.jpg" alt="picture of kelvin gobo">
           </div>
           <div class="author-note">
-            <h1>Kelvin Gobo</h1>
-            <p class="position">Front End Developer</p>
-            <p>I'm a Front End Developer with a passion for building beautiful and applications on the WWW.</p>
+            <h1>kelvin gobo</h1>
+            <p class="position">front end developer</p>
+            <p>I'm a front end developer with a passion for building beautiful applications on the WWW.</p>
             <button>Portfolio</button>
           </div>
         </div>
@@ -207,9 +298,9 @@
       
     </div>
 
-    <div class="section">
-      <h2>Portfolio</h2>
-      <p>my latest work</p>
+    <div class="portfolio">
+      <h2>portfolio</h2>
+      <h3>my latest work</h3>
       <div>
         <img src="images/mundle.png" alt="mundle website">
         <img src="images/dewbicon.png" alt="dewbicon website">
@@ -219,31 +310,31 @@
 
     <div class="exp">
       <div class="section">
-          <h2>Experience</h2>
-          <div style="width: 50%;">
-              <p class="center">2016-2017</p>
-              <h3 class="center">DEWBICON</h3>
-              <p class="center">Front End Developer</p>
-              <p class="center">description of role assigned in movie</p>
+          <h2>experience</h2>
+          <div class="left">
+              <p style="color: #ffe57f;">2016-2017</p>
+              <h3>DEWBICON</h3>
+              <p>Front End Developer</p>
+              <p>description of role assigned in movie</p>
           </div>
           
-          <div style="width: 80%;">
-            <p style="color: #ffe57f;" class="right">2017-2018</p>
-            <h3 class="right">ANDELA LEARNING COMMUNITY</h3>
-            <p class="right">Learning community ambassador</p>
-            <p class="right">description of role assigned in movie</p>
+          <div class="right">
+            <p style="color: #ffe57f;">2017-2018</p>
+            <h3>ANDELA LEARNING COMMUNITY</h3>
+            <p>Learning community ambassador</p>
+            <p>description of role assigned in movie</p>
           </div>
-          <div style="width: 50%;">
-            <p class="center">2018</p>
-            <h3 class="center">HOTELS.NG</h3>
-            <p class="center">HNG Intern</p>
-            <p class="center">description of role assigned in movie</p>
+          <div class="left">
+            <p style="color: #ffe57f;">2018</p>
+            <h3>HOTELS.NG</h3>
+            <p>HNG Intern</p>
+            <p>description of role assigned in movie</p>
           </div>
       </div>
       
     </div>
 
-    <div class="section">
+    <div class="toolbox">
       <h2>Toolbox</h2>
       <p>My software development stack</p>
       <p>
@@ -255,8 +346,8 @@
       </p>
     </div>
 
-    <div class="section">
-      <div style="display: flex; justify-content: space-around;">
+    <div class="contact">
+      <div class="contact-content">
         <div style="width: 50%;">
           <h2>Reach me</h2>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus delectus sit asperiores vitae voluptas suscipit magnam saepe pariatur, minima non beatae sed et vero nam, necessitatibus, fuga eligendi provident fugiat!</p>
